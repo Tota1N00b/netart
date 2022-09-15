@@ -5,12 +5,12 @@ body{
 
 .container {
     position: relative;
-    width: 100%;
+    /* width: 33.33%; */
 }
 
 .flex-container {
     display:flex;
-    flex-direction: row;
+    flex-direction: row wrap;
     flex-wrap: wrap;
     align-items: flex-start;
     align-content: flex-start;
@@ -22,6 +22,7 @@ body{
 
 .image2{
     max-width: 50%;
+    /* justify-content:right; */
     /* float: right;
     align-items: center; */
 }
