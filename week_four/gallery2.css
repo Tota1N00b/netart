@@ -4,6 +4,10 @@ body {
     background: linear-gradient(-55deg, #cdb4db, #ffc8dd, #bde0fe, #a2d2ff);
 }
 
+p {
+    padding: 1rem;
+}
+
 .image {
     width: 100%;
     height: 100%;
@@ -45,7 +49,7 @@ body {
 }
 
 .large-card-inner {
-    position: absolute;
+    /* position: absolute; */
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
@@ -66,10 +70,11 @@ body {
 .large-card-back {
     position: absolute;
     /* position: relative; */
-    width: 100%;
-    /* max-width: 500px; */
-    height: 100%;
-    /* height: auto; */
+    /* width: 100%; */
+    width: auto;
+    max-width: 500px;
+    /* height: 100%; */
+    height: auto;
     -webkit-backface-visibility: hidden;
     /* Safari */
     backface-visibility: hidden;
@@ -86,7 +91,7 @@ body {
 .large-card-back {
     background-color: dodgerblue;
     color: white;
-    padding: 1rem;
+    /* padding: 1rem; */
     transform: rotateY(180deg);
     border-radius: 1rem;
 }

@@ -1,15 +1,22 @@
 // const largecards = document.querySelectorAll(".large-card");
 // const largecardsinnerfront = document.querySelectorAll(".large-card-front");
 
-const largecards = document.getElementsByClassName(".large-card");
-const largecardsinnerfront = document.getElementsByClassName(".large-card-front");
 
-console.log("start");
+function reseizecards() {
+    const largecards = document.getElementsByClassName("large-card");
+    const largecardsinnerfront = document.getElementsByClassName("large-card-front");
+    const largecardsinnerback = document.getElementsByClassName("large-card-back");
 
-for(let i=0; i<largecards.length;i++){
-    console.log(largecards[i].style.height);
-    largecards[i].style.height = largecardsinnerfront[i].style.height;
-    // largecards[i].style.height = "100px";
-    console.log("changed"+i);
-    console.log(largecardsinnerfront[i].style.height);
+    console.log("start" + largecards.length);
+
+    for (let i = 0; i < largecards.length; i++) {
+        largecards[i].style.height = largecardsinnerfront[i].clientHeight + "px";
+        largecards[i].style.width = largecardsinnerfront[i].clientWidth + "px";
+        largecardsinnerback[i].style.height = largecardsinnerfront[i].clientHeight + "px";
+    }
 }
+reseizecards();
+
+window.addEventListener('resize', function (event) {
+    reseizecards();
+});
